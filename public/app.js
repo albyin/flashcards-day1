@@ -2,7 +2,7 @@ var app = angular.module('FlashCards', []);
 
 app.controller('FlashCardController', function ($scope) {
 	$scope.answerQuestion = function (obj){
-		console.log(obj.text);
+		if ($scope.answered) return;
 		$scope.answered = true;
 		$scope.answeredCorrectly = obj.correct;
 	};
